@@ -28,7 +28,7 @@ public class QuoteProvider {
   }
 
   @TableEndpoint(table = QuoteDatabase.QUOTES)
-  public static class Quotes{
+  public static class Quotes {
     @ContentUri(
         path = Path.QUOTES,
         type = "vnd.android.cursor.dir/quote"
