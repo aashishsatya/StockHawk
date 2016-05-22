@@ -11,6 +11,8 @@
     <string name="input_prefill"></string>
     <string name="network_toast">Uh-oh! This app requires an internet connection</string>
 
+    <string name="no_stock_symbol_message">The stock symbol does not exist, try again.</string>
+
     <string name="stock_title">Bid Price of %1$s</string>
 
     <string name="appwidget_text">STOCK HAWK</string>

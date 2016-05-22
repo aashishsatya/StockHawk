@@ -30,8 +30,16 @@ public class Utils {
         if (count == 1){
           jsonObject = jsonObject.getJSONObject("results")
               .getJSONObject("quote");
-          batchOperations.add(buildBatchOperation(jsonObject));
-        } else{
+          // if you look at the debug crash log you'll notice that this is where the crash occurred
+          // problem is, in
+          // builder.withValue(QuoteColumns.BIDPRICE, truncateBidPrice(jsonObject.getString("Bid")));
+          // jsonObject.getString("Bid") returns a null instead of a float value
+          // so simply check for this!!
+          if (!jsonObject.isNull("Bid")) {
+            batchOperations.add(buildBatchOperation(jsonObject));
+          }
+        }
+        else {
           resultsArray = jsonObject.getJSONObject("results").getJSONArray("quote");
 
           if (resultsArray != null && resultsArray.length() != 0){
