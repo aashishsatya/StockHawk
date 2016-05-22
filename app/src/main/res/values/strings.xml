@@ -12,4 +12,7 @@
     <string name="network_toast">Uh-oh! This app requires an internet connection</string>
 
     <string name="stock_title">Bid Price of %1$s</string>
+
+    <string name="appwidget_text">STOCK HAWK</string>
+    <string name="add_widget">Add widget</string>
 </resources>
