@@ -17,4 +17,6 @@
 
     <string name="appwidget_text">STOCK HAWK</string>
     <string name="add_widget">Add widget</string>
+
+    <string name="add_new_stock">Add new stock</string>
 </resources>
