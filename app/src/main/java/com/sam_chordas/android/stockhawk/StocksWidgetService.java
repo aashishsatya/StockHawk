@@ -97,10 +97,10 @@ public class StocksWidgetService extends RemoteViewsService {
 
                 // display either the percentage change or proper dollar value corresponding to user's choice
                 if (Utils.showPercent) {
-                    views.setTextViewText(R.id.change, data.getString(data.getColumnIndex("percent_change")));
+                    views.setTextViewText(R.id.change, data.getString(data.getColumnIndex(QuoteColumns.PERCENT_CHANGE)));
                 }
                 else {
-                    views.setTextViewText(R.id.change, data.getString(data.getColumnIndex("change")));
+                    views.setTextViewText(R.id.change, data.getString(data.getColumnIndex(QuoteColumns.CHANGE)));
                 }
 
                 final Intent fillInIntent = new Intent();

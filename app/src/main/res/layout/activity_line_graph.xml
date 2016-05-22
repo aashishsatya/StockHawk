@@ -16,6 +16,6 @@
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:id="@+id/bidPriceTextView"
         android:layout_gravity="center_horizontal|top"
-        android:text="Bid Price" />
+        android:text="@string/str_bid_price" />
 
 </FrameLayout>

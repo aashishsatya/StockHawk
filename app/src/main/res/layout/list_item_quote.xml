@@ -16,7 +16,7 @@
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
       android:gravity="start|center_vertical"
-      tools:text="GOOG"
+      tools:text="@string/google_symbol"
       />
   <LinearLayout
       android:layout_width="0dp"
@@ -33,7 +33,7 @@
         android:paddingEnd="10sp"
         android:paddingLeft="10sp"
         android:paddingStart="10sp"
-        tools:text="1000.00"
+        tools:text="@string/str_thousand"
         />
     <TextView
         android:id="@+id/change"
@@ -45,7 +45,7 @@
         android:paddingStart="3dp"
         android:paddingRight="3dp"
         android:paddingEnd="3dp"
-        tools:text="100%"
+        tools:text="@string/str_hundred_percent"
         />
   </LinearLayout>
 </LinearLayout>

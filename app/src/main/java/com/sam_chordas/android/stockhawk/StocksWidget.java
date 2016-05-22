@@ -28,8 +28,6 @@ public class StocksWidget extends AppWidgetProvider {
         // set the onClickPendingIntent
         Intent stocksIntent = new Intent(context, MyStocksActivity.class);
 
-        //TODO: Try implementing individual behaviours
-
         PendingIntent stocksPendingIntent = PendingIntent.getActivity(context, 0, stocksIntent, PendingIntent.FLAG_UPDATE_CURRENT);
         // launch activity when the title 'STOCK HAWK' is clicked
         views.setOnClickPendingIntent(R.id.appwidget_text, stocksPendingIntent);
