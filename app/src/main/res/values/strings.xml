@@ -21,6 +21,7 @@
     <string name="add_new_stock">Add new stock</string>
 
     <string name="stock_already_saved_msg">This stock is already saved!</string>
+    <string name="stock_non_existent_msg">This stock does not exist, try again</string>
     <string name="str_bid_price">Bid Price</string>
     <string name="str_hundred_percent" translatable="false">100\%</string>
     <string name="str_thousand" translatable="false">1000.00</string>

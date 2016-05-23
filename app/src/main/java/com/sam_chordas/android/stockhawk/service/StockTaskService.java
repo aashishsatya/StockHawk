@@ -7,6 +7,8 @@ import android.content.Context;
 import android.content.OperationApplicationException;
 import android.database.Cursor;
 import android.database.DatabaseUtils;
+import android.os.Handler;
+import android.os.Looper;
 import android.os.RemoteException;
 import android.util.Log;
 import android.widget.Toast;
@@ -129,7 +131,16 @@ public class StockTaskService extends GcmTaskService{
           }
           ArrayList<ContentProviderOperation> quoteJsonToContentValsResults = Utils.quoteJsonToContentVals(getResponse);
 
-          // is there a way to display a toast here?
+          // display a toast notification saying that the stock does not exist
+          if (quoteJsonToContentValsResults == null) {
+            new Handler(Looper.getMainLooper()).post(new Runnable() {
+              @Override
+              public void run() {
+                Toast.makeText(mContext, mContext.getString(R.string.stock_non_existent_msg), Toast.LENGTH_SHORT).show();
+              }
+            });
+            quoteJsonToContentValsResults = new ArrayList<>();
+          }
 
           mContext.getContentResolver().applyBatch(QuoteProvider.AUTHORITY,
                   quoteJsonToContentValsResults);

@@ -38,6 +38,8 @@ public class Utils {
           if (!jsonObject.isNull("Bid")) {
             batchOperations.add(buildBatchOperation(jsonObject));
           }
+          else
+            return null;
         }
         else {
           resultsArray = jsonObject.getJSONObject("results").getJSONArray("quote");
